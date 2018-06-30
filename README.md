@@ -3,6 +3,15 @@ Docker DNS
 
 Given access to a Docker API and a host on which the containers run on, provide DNS entries for those containers.
 
+Problem Statement
+--
+
+1. As a developer, you don't want to have to keep DNS records for containers up to date.
+1. As a developer, you have http services which listen on a hostname
+1. As a developer, you want to run a proxy service which routes based on requests, but all of your requests go to localhost when running locally
+
+In any of these apply then this project might be useful.
+
 Usage
 --
 
