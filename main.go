@@ -11,6 +11,7 @@ var (
 	domain   = flag.String("domain", "internal.", "Domain name with which to serve records on")
 	target   = flag.String("target", "localhost", "Address (host, ipv4, ipv6 etc.) to respond to requests with")
 	resolver = flag.String("resolver", "1.1.1.1:53", "DNS Server to pass reqeusts to which are not on our domain")
+	listen   = flag.String("listen", ":53", "Port on which to serve DNS requests")
 )
 
 func main() {
@@ -28,5 +29,5 @@ func main() {
 		log.Panic(err)
 	}
 
-	panic(dns.ListenAndServe(":3553", "udp", d))
+	panic(dns.ListenAndServe(*listen, "udp", d))
 }
