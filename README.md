@@ -1,7 +1,7 @@
 Docker DNS
 ==
 
-Given access to a Docker API and a host on which the containers run on, provide DNS entries for those containers.
+Given access to a Docker API and a host on which the containers run on, provide DNS entries for those containers. All queries for containers _not_ on the docker cluster you're working against are passed off to another resolver.
 
 Problem Statement
 --
